@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sing In</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='up.css')}}">
+
+	<script type="text/javascript">
+
+		function but(){
+			document.querySelector(".button").value = 'Sing In »';
+		}
+
+		function but_Not(){
+			document.querySelector('.button').value = 'Sing In';
+		}
+
+	</script>
+</head>
+<body>
+	<form method="POST">
+		<span id="error">{{error}}</span>
+
+		<!-- <span class="name">Username</span><br> -->
+		<input type="username" name="username" class="user" placeholder="Username" autofocus="off" autocomplete="off" required >
+
+		<!-- <br><span class="password">Password</span><br> -->
+		<input type="password" name="password" placeholder="Password" class="user" required  min="8" max="24">
+		<br>
+		<input type="submit" name="button" class="button" value="Sign In" onmouseover="but()" onmouseleave="but_Not()">
+	</form>
+</body>
+</html>

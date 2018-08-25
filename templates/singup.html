@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASK-Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='up.css')}}">
+	<!-- <link rel="stylesheet" type="text/css" href="up.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+	<script type="text/javascript">
+
+		function but(){
+			document.querySelector(".button").value = 'Sing Up »';
+		}
+
+		function but_Not(){
+			document.querySelector('.button').value = 'Sing Up';
+		}
+
+	</script>
+
+</head>
+<body>
+	<form method="POST">
+		<span id="error">{{error}}</span>
+
+		<!-- <span class="name">Username</span><br> -->
+		<input type="username" name="username" class="user" placeholder="Username" autofocus="off" autocomplete="off" required >
+
+		<input type="email" name="email" class="user" placeholder="E-mail address">
+		<!-- <br><span class="password">Password</span><br> -->
+		<input type="password" name="password" placeholder="Password" class="user" required  min="8" max="24">
+		<br>
+		<input type="submit" name="button" class="button" value="Sign Up" onmouseover="but()" onmouseleave="but_Not()">
+	</form>
+</body>
+</html>

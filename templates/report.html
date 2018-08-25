@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASK-REPORT</title>
+	 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='repo.css')}}"> 
+	<!-- <link rel="stylesheet" type="text/css" href="repo.css"> -->
+</head>
+<body>
+	<h1>Weather:{{name}}<h1>
+	<h2></h2>
+	<div class="report">
+		<img src="{{url_for('static',filename='clod.png')}}"> 
+		<!-- <img src="clod.png"> -->
+		<h3>{{co}} ℃</h3>
+		<p class="min">Min Temp: {{temp_min}}℃</p>
+		<span class="max">Max Temp: {{temp_max}}℃</span><br>
+		<div class="hum">Humidity:{{hum}}%</div>
+	</div>
+
+	<div class="load">
+		
+	</div>
+	
+	<script type="text/javascript">
+		document.addEventListener('load',function(){
+			document.querySelector('.load').style.display = 'none';
+		});
+	</script>
+</body>
+</html>
