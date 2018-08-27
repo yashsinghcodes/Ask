@@ -64,7 +64,7 @@ def regis():
 
 @app.route('/login',methods=['GET','POST'])
 def login():
-	error = ''
+	error = 'Coming Soon'
 	return render_template('login.html',error=error)
 	
 
